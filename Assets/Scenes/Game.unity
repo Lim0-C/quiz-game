@@ -389,7 +389,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 374083944}
-  - {fileID: 1367765723}
   m_Father: {fileID: 649762857}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -409,6 +408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0df6c9f66f6fa52468f9b0eba8773625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quizCardPrefab: {fileID: 6193513396515527328, guid: a910b42d4aa1418479d1d7ae7cb91984, type: 3}
+  quizCardParent: {fileID: 733073967}
 --- !u!114 &733073969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,7 +448,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733073966}
   m_CullTransparentMesh: 1
---- !u!1 &1367765722
+--- !u!1 &1668865311
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -455,86 +456,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1367765723}
-  - component: {fileID: 1367765726}
-  - component: {fileID: 1367765725}
-  - component: {fileID: 1367765724}
-  m_Layer: 5
-  m_Name: Quiz Card
+  - component: {fileID: 1668865313}
+  - component: {fileID: 1668865312}
+  m_Layer: 0
+  m_Name: Object Pool
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1367765723
-RectTransform:
+--- !u!114 &1668865312
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367765722}
+  m_GameObject: {fileID: 1668865311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9e1eb383e1ccbe409771a620cd35404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6193513396515527328, guid: a910b42d4aa1418479d1d7ae7cb91984, type: 3}
+  poolSize: 3
+--- !u!4 &1668865313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668865311}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 100}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 733073967}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -200, y: -300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1367765724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367765722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc7c1df20992cc24093ba2622ed8484d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1367765725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367765722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1bca5b744c5016841881a91dc3ca9fcf, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1367765726
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367765722}
-  m_CullTransparentMesh: 1
 --- !u!1 &1772462257
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,3 +795,4 @@ SceneRoots:
   - {fileID: 1772462260}
   - {fileID: 649762857}
   - {fileID: 2030602500}
+  - {fileID: 1668865313}
